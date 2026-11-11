@@ -26,18 +26,21 @@ Official deployment reference: https://developers.cloudflare.com/pages/framework
 
 Primary source: https://www.roblox.com/games/140431845542654/Bloody-Ragdoll-Physics — checked 2026-11-11.
 
-Confirmed: advertised 23 weapons, 14 syringes, nine example weapon names, five event names, NPC Wars flow and broad sandbox features. Full roster, numeric stats, exact UI positions, unlocks and individual syringe mappings remain unknown. Do not replace unknown fields with guesses. `lib/data.ts` holds the confirmed-name registry; `/sources/` explains provenance.
+Confirmed: advertised 23 weapons, 14 syringes, ten sourced weapon names, five event names, NPC Wars flow and broad sandbox features. Official pass descriptions and 13 badge objectives were checked on 12 November 2026. Full roster, numeric stats, exact controls and individual syringe mappings remain unknown. Do not replace unknown fields with guesses. `lib/data.ts` holds the confirmed-name registry; `/sources/` explains provenance.
 
 All SVG art is original conceptual artwork. The physics demo is a ballistic visualization with decorative rotation and a floor clamp, not Roblox physics. World-event animations are interpretations, not gameplay recordings. Weapon categories are editorial. The notebook stores user-entered plans locally; it does not simulate battles.
 
 ## Routes / user tasks
 
 - `/`: system overview and entry points
-- `/weapons/`: search and category filters for nine confirmed names
+- `/weapons/`: search and category filters for ten confirmed names
 - `/weapons/[slug]/`: sourced name, unknown fields and experiment checklist
 - `/syringes/`: supported description-level observations, no invented roster
 - `/guides/`: illustrated NPC Wars sequence and locally saved battle notebook
 - `/sandbox/`: adjustable illustrative physics demo and five event concepts
+- `/passes/`: five official pass descriptions, dated prices and entitlement matrix
+- `/badges/`: 13 source-linked objectives, filters and browser-local progress
+- `/guides/mobile/`: interactive schematic of video-observed labels; game identity and gestures remain unverified
 - `/sources/`: evidence, limitations and privacy
 
 Search demand and keyword volumes are not measured. These task mappings come from the project brief and source availability, not fabricated SEO data. Canonical URLs and sitemap use the assigned Cloudflare hostname: https://bloody-ragdoll-physics.pages.dev. Update metadataBase and the sitemap origin together when a custom domain is configured.

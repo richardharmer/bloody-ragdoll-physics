@@ -1,3 +1,4 @@
+import { GuideLinks } from "@/components/GuideLinks";
 import { PageIntro } from "@/components/Shell";
 import { WarPlanner } from "@/components/Experiments";
 export const metadata = {
@@ -22,6 +23,7 @@ export default function Page() {
         game UI.
       </div>
       <WarPlanner />
+      <GuideLinks />
     </div>
   );
 }

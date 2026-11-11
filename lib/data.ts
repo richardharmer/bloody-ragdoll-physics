@@ -2,6 +2,7 @@ export const official =
   "https://www.roblox.com/games/140431845542654/Bloody-Ragdoll-Physics";
 export const verifiedDate = "2026-11-11";
 export const weapons = [
+  // Only official-name records belong here; video-only labels are kept separate.
   { slug: "sniper", name: "Sniper", category: "Ranged", kind: "rifle" },
   { slug: "shotgun", name: "Shotgun", category: "Ranged", kind: "shotgun" },
   { slug: "chainsaw", name: "Chainsaw", category: "Melee", kind: "chainsaw" },
@@ -35,6 +36,12 @@ export const weapons = [
     name: "Black hole",
     category: "Physics",
     kind: "blackhole",
+  },
+  {
+    slug: "lightning-staff",
+    name: "Lightning Staff",
+    category: "Physics",
+    kind: "lightning",
   },
 ];
 export const events = [
@@ -74,3 +81,11 @@ export const events = [
     note: "Compare movement before and after activation; test recovery separately.",
   },
 ];
+
+export const weaponTotal = 23;
+export const weaponSource = (slug: string) =>
+  slug === "lightning-staff"
+    ? "https://www.roblox.com/game-pass/2058843165/Arsenal"
+    : official;
+export const weaponChecked = (slug: string) =>
+  slug === "lightning-staff" ? "12 November 2026" : "11 November 2026";

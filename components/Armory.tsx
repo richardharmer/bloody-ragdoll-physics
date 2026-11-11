@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Search, ArrowUpRight } from "lucide-react";
-import { weapons } from "@/lib/data";
+import { weapons, weaponTotal } from "@/lib/data";
 import { WeaponArt } from "./Art";
 export default function Armory() {
   const [query, setQuery] = useState("");
@@ -37,8 +37,8 @@ export default function Armory() {
         </div>
       </div>
       <p className="result-count" aria-live="polite">
-        {shown.length} of 9 confirmed names · Editorial categories · 14 other
-        names not yet verified
+        {shown.length} of {weapons.length} confirmed names · Editorial
+        categories · {weaponTotal - weapons.length} other names not yet verified
       </p>
       <div className="weapon-grid">
         {shown.map((w) => (

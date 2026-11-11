@@ -35,6 +35,9 @@ export function Footer() {
         <span className="eyebrow">
           <Crosshair size={16} /> INDEPENDENT FIELD GUIDE
         </span>
+        <Link href="/passes/">Passes</Link>
+        <Link href="/badges/">Badges</Link>
+        <Link href="/guides/mobile/">Mobile</Link>
         <Link href="/sources/">Sources & verification ↗</Link>
       </div>
       <p>
@@ -42,7 +45,7 @@ export function Footer() {
         creator. Illustrations and simulations are original explanatory
         concepts, not game assets or measured game behavior.
       </p>
-      <small>Verified against the official description · 11 NOV 2026</small>
+      <small>Official game, pass and badge records · Updated 12 NOV 2026</small>
     </footer>
   );
 }

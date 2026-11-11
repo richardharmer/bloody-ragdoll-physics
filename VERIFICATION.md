@@ -11,3 +11,14 @@
 - Initial Cloudflare Git-integrated deployment succeeded. Public homepage loaded at https://bloody-ragdoll-physics.pages.dev/.
 
 Limitations: no actual Roblox gameplay session was tested. UI button locations, precise mechanics, item models and full roster remain unverified. SVG art and event animations are concepts. No claim is made about measured Core Web Vitals, search rankings, or full accessibility conformance. Production smoke verification is separate from the deeper local interaction checks above.
+
+
+## Content release — 12 November 2026
+
+- Official Arsenal pass adds Lightning Staff: 10 sourced names / 23 advertised weapons.
+- Five official pass records, dated Robux prices, entitlement matrix and restrictions.
+- All 13 official badge objectives have per-record source links. Checklist saves locally and supports category / unfinished filters.
+- B2E FF video OiE_DfxaXJE: inspected approximately 00:14 and 00:30. Original interactive schematic shows visible labels and relative positions only. Exact Roblox place identity, touch sequence and button effects remain unconfirmed; footage labels are not imported into the official weapon roster.
+- Browser QA: 390px passes and mobile pages have document width 390px; annotation switch updates detail and timestamp. Badge completion survives reload; First steps + unfinished filter excludes the completed task.
+- Browser extension adds an immersive-translate attribute to HTML, generating a development hydration attribute warning; no application interaction failure observed.
+- Production build, TypeScript and static export audit passed: 19 sitemap routes, one H1 and matching canonical per route, all local page links resolve. Mobile badge page also fits 390px.

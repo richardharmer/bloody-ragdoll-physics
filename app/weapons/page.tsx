@@ -4,15 +4,15 @@ export const metadata = {
   alternates: { canonical: "/weapons/" },
   title: "Weapon database — confirmed names",
   description:
-    "Browse the 9 weapon names confirmed in the official Bloody Ragdoll Physics description. Full roster, damage and unlock details remain unverified.",
+    "Browse 10 weapon names confirmed by the official game description and Arsenal pass, including Lightning Staff. Numeric stats remain unverified.",
 };
 export default function Page() {
   return (
     <div className="page">
       <PageIntro tag="DATABASE / THE ARMORY" title="Choose your instrument.">
-        23 weapons are advertised. These 9 names appear in the official
-        description. Artwork is conceptual; damage, unlocks and exact models are
-        not verified.
+        23 weapons are advertised. These 10 names are confirmed by the official
+        game description and Arsenal pass. Artwork is conceptual; damage,
+        unlocks and exact models are not verified.
       </PageIntro>
       <Armory />
     </div>

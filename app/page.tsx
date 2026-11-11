@@ -1,3 +1,4 @@
+import { GuideLinks } from "@/components/GuideLinks";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -57,7 +58,7 @@ export default function Home() {
         <Link href="/weapons/">
           <b>23</b>
           <span>
-            WEAPONS<small>9 names confirmed</small>
+            WEAPONS<small>{weapons.length} names confirmed</small>
           </span>
           <ArrowUpRight />
         </Link>
@@ -208,6 +209,9 @@ export default function Home() {
         <Link href="/sources/">
           Read our source notes <ArrowUpRight size={16} />
         </Link>
+      </div>
+      <div className="page">
+        <GuideLinks />
       </div>
     </>
   );

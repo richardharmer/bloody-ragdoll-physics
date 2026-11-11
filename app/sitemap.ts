@@ -9,9 +9,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/guides/",
     "/sandbox/",
     "/sources/",
+    "/passes/",
+    "/badges/",
+    "/guides/mobile/",
     ...weapons.map((w) => `/weapons/${w.slug}/`),
   ].map((path) => ({
     url: `https://bloody-ragdoll-physics.pages.dev${path}`,
-    lastModified: "2026-11-11",
+    lastModified: ["/syringes/", "/sandbox/"].includes(path)
+      ? "2026-11-11"
+      : "2026-11-12",
   }));
 }

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { weapons, official } from "@/lib/data";
+import { weapons, official, weaponSource, weaponChecked } from "@/lib/data";
 import { WeaponArt } from "@/components/Art";
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -37,11 +37,14 @@ export default async function Page({
           <p className="eyebrow">ARMORY / {w.category.toUpperCase()}</p>
           <h1>{w.name}</h1>
           <p className="confirmed">
-            ✓ Name confirmed in the official game description
+            ✓ Name confirmed in{" "}
+            {w.slug === "lightning-staff"
+              ? "the official Arsenal pass description"
+              : "the official game description"}
           </p>
           <p>
             This entry confirms the weapon’s presence. It does not claim a
-            damage value, location, unlock method or special behavior.
+            damage value, menu location or special behavior.
           </p>
           <a
             className="button primary"
@@ -68,7 +71,12 @@ export default async function Page({
             <div>
               <dt>Source</dt>
               <dd>
-                <a href={official}>Official Roblox description ↗</a>
+                <a href={weaponSource(w.slug)}>
+                  {w.slug === "lightning-staff"
+                    ? "Official Arsenal pass"
+                    : "Official game description"}{" "}
+                  ↗
+                </a>
               </dd>
             </div>
             <div>
@@ -76,12 +84,22 @@ export default async function Page({
               <dd>Not verified</dd>
             </div>
             <div>
-              <dt>Unlock / menu location</dt>
-              <dd>Not verified</dd>
+              <dt>Access / menu location</dt>
+              <dd>
+                {w.slug === "lightning-staff" ? (
+                  <>
+                    Listed in Arsenal; Everything includes Arsenal. Menu
+                    location not verified.{" "}
+                    <Link href="/passes/">Compare passes →</Link>
+                  </>
+                ) : (
+                  "Not verified in this entry"
+                )}
+              </dd>
             </div>
             <div>
               <dt>Last checked</dt>
-              <dd>11 November 2026</dd>
+              <dd>{weaponChecked(w.slug)}</dd>
             </div>
           </dl>
         </section>

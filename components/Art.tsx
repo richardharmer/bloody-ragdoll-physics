@@ -19,7 +19,23 @@ export function WeaponArt({ kind = "rifle" }: { kind?: string }) {
         stroke="#91a5a5"
         strokeWidth="2"
       >
-        {kind === "blackhole" ? (
+        {kind === "lightning" ? (
+          <>
+            <path d="M70 115L265 45l8 16-195 70z" />
+            <path
+              d="M246 48l30-28 14 25 30-10-26 46-20-19-22 11z"
+              fill="#a6dfff"
+              stroke="#70dbe6"
+            />
+            <path
+              d="M285 10l-12 23 18 4-5 25"
+              fill="none"
+              stroke="#edfaff"
+              strokeWidth="4"
+            />
+            <path d="M78 112l36-13 6 16-36 13z" fill="#ee9255" />
+          </>
+        ) : kind === "blackhole" ? (
           <>
             <ellipse
               cx="170"
