@@ -43,7 +43,7 @@ All SVG art is original conceptual artwork. The physics demo is a ballistic visu
 - `/guides/mobile/`: interactive schematic of video-observed labels; game identity and gestures remain unverified
 - `/sources/`: evidence, limitations and privacy
 
-Search demand and keyword volumes are not measured. These task mappings come from the project brief and source availability, not fabricated SEO data. Canonical URLs and sitemap use the assigned Cloudflare hostname: https://bloody-ragdoll-physics.pages.dev. Update metadataBase and the sitemap origin together when a custom domain is configured.
+Search demand and keyword volumes are not measured. These task mappings come from the project brief and source availability, not fabricated SEO data. Canonical URLs, metadataBase and sitemap use the production domain https://bloodyragdollphysics.com. Cloudflare redirects www to the apex domain with a 301 and preserves page paths. The pages.dev address remains the Cloudflare deployment hostname.
 
 ## Visual system
 

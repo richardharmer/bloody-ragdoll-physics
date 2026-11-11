@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header, Footer } from "@/components/Shell";
 import "./globals.css";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bloody-ragdoll-physics.pages.dev"),
+  metadataBase: new URL("https://bloodyragdollphysics.com"),
   title: {
     default: "Bloody Ragdoll Physics — Interactive Wiki & Field Guide",
     template: "%s | Bloody Ragdoll Physics Guide",

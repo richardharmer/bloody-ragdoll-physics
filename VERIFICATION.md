@@ -32,3 +32,8 @@ Limitations: no actual Roblox gameplay session was tested. UI button locations, 
 - No verified individual syringe names/effects added. Broad official outcomes remain separately labeled.
 - Production build and typecheck pass. Static audit: all 34 sitemap pages have one H1, matching canonical, resolving internal links and local image assets.
 - Browser QA against static production output: Tools filter yields six cards; thruster search yields two; empty results and reset restore 25. Lightning stage switch renders body-to-body arcs. Mobile FIRE/RELOAD annotation updates correctly. Armory and detail fit 390px without page overflow; mobile diagram inspected at 390px.
+
+## Production domain — 12 November 2026
+
+- User configured bloodyragdollphysics.com and www redirect in Cloudflare. HTTPS www equipment detail request returns 301 to the same path on apex, followed by 200.
+- metadataBase, 34 static canonical URLs, sitemap and robots sitemap reference now use https://bloodyragdollphysics.com. Production build and TypeScript pass.
