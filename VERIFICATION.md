@@ -37,3 +37,9 @@ Limitations: no actual Roblox gameplay session was tested. UI button locations, 
 
 - User configured bloodyragdollphysics.com and www redirect in Cloudflare. HTTPS www equipment detail request returns 301 to the same path on apex, followed by 200.
 - metadataBase, 34 static canonical URLs, sitemap and robots sitemap reference now use https://bloodyragdollphysics.com. Production build and TypeScript pass.
+
+## Analytics installation — 12 November 2026
+
+- Installed user-supplied GTM-TW44824G snippet and Clarity project zc2um79ysp in the root layout head. Uses Google's current manual-install snippet, not the previous two-part container snippet.
+- Production build and typecheck passed. Parsed all 37 exported HTML files (including error outputs): exactly one GTM external loader, one Google initializer and one Clarity initializer per file, all within head. Updated source-page privacy disclosure to acknowledge analytics.
+- Tag configuration and report ingestion inside Google/Clarity dashboards are not covered by static installation checks.

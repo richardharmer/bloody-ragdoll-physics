@@ -136,12 +136,19 @@ export default function Page() {
       </p>
       <h2>Privacy & independence</h2>
       <p>
-        No accounts, ads or analytics are implemented. The badge checklist and
-        battle notebook store only the progress, notes and choices you save in
-        your browser’s local storage. The hosting provider may process normal
-        request logs. External Roblox links take you to a separate service. This
-        is an independent fan resource, not an official Roblox or developer
-        website.
+        This site loads Google Tag Manager to manage measurement tags and
+        Microsoft Clarity for usage analysis, heatmaps and session replay. These
+        services may process browsing and device information and use cookies.
+        The badge checklist and battle notebook store only the progress, notes
+        and choices you save in your browser’s local storage. See the{" "}
+        <a href="https://policies.google.com/privacy">Google privacy policy</a>{" "}
+        and{" "}
+        <a href="https://privacy.microsoft.com/privacystatement">
+          Microsoft privacy statement
+        </a>
+        . The hosting provider may process normal request logs. External Roblox
+        links take you to a separate service. This is an independent fan
+        resource, not an official Roblox or developer website.
       </p>
     </div>
   );
