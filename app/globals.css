@@ -1855,3 +1855,137 @@ footer .guide-links h2 {
     flex-direction: column;
   }
 }
+
+.equipment-icon {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  padding: 14px;
+  filter: drop-shadow(0 12px 20px #0005);
+}
+.detail-art .equipment-icon {
+  height: 350px;
+  padding: 28px;
+}
+.card-effect {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #b1c1cb;
+  min-height: 46px;
+  margin: 10px 0 15px;
+}
+.effect-explainer {
+  margin: 40px 0;
+  padding: 28px;
+  border: 1px solid #355262;
+  background: #101a22;
+  border-radius: 16px;
+}
+.effect-explainer > p {
+  color: #adbfcb;
+  line-height: 1.7;
+}
+.effect-explainer h2 {
+  font-size: 28px;
+  margin: 14px 0;
+}
+.effect-explainer svg {
+  display: block;
+  width: 100%;
+  max-height: 340px;
+  margin-top: 22px;
+}
+.effect-stages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 24px;
+}
+.effect-stages button {
+  padding: 16px;
+  border: 1px solid #4a606d;
+  border-radius: 8px;
+  background: #172630;
+  color: #c8d7df;
+  text-align: left;
+  cursor: pointer;
+}
+.effect-stages span {
+  display: block;
+  font: 13px monospace;
+  margin-bottom: 8px;
+  color: #ed936a;
+}
+.effect-stages button[aria-pressed="true"] {
+  border-color: #97cfe5;
+  background: #244454;
+  color: #fff;
+}
+.effect-caption {
+  min-height: 55px;
+}
+.evidence-metrics {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #354550;
+  padding: 24px 0;
+  margin: 10px 0 24px;
+}
+.evidence-metrics strong {
+  font-size: 34px;
+  color: #b9f279;
+  display: block;
+}
+.evidence-metrics span {
+  color: #aebec8;
+}
+.video-evidence {
+  margin: 40px 0;
+}
+.video-evidence table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.video-evidence th,
+.video-evidence td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #34434c;
+}
+.video-evidence td {
+  color: #b8c9d1;
+}
+.filter-bar {
+  flex-wrap: wrap;
+}
+.chips {
+  flex-wrap: wrap;
+}
+.footer-top {
+  flex-wrap: wrap;
+  gap: 18px;
+}
+@media (max-width: 720px) {
+  .effect-explainer {
+    padding: 18px;
+  }
+  .effect-stages {
+    gap: 7px;
+  }
+  .effect-stages button {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+  .detail-art .equipment-icon {
+    height: 280px;
+  }
+  .video-evidence table {
+    font-size: 13px;
+  }
+  .video-evidence td,
+  .video-evidence th {
+    padding: 10px 6px;
+  }
+}

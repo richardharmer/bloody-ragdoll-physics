@@ -1,3 +1,4 @@
+import { equipmentEvidence } from "@/lib/equipment";
 import { GuideLinks } from "@/components/GuideLinks";
 import Link from "next/link";
 import {
@@ -9,7 +10,8 @@ import {
   Orbit,
   Zap,
 } from "lucide-react";
-import { LabArt, WeaponArt } from "@/components/Art";
+import { LabArt } from "@/components/Art";
+import { EquipmentArt } from "@/components/EquipmentArt";
 import { weapons } from "@/lib/data";
 export const metadata = { alternates: { canonical: "/" } };
 export default function Home() {
@@ -58,7 +60,8 @@ export default function Home() {
         <Link href="/weapons/">
           <b>23</b>
           <span>
-            WEAPONS<small>{weapons.length} names confirmed</small>
+            WEAPONS ADVERTISED
+            <small>{weapons.length} weapon & tool records</small>
           </span>
           <ArrowUpRight />
         </Link>
@@ -166,10 +169,14 @@ export default function Home() {
                 <span>{w.category}</span>
                 <ArrowUpRight size={18} />
               </div>
-              <WeaponArt kind={w.kind} />
+              <EquipmentArt {...w} />
               <div className="weapon-bottom">
                 <h3>{w.name}</h3>
-                <small>NAME CONFIRMED · CONCEPT ART</small>
+                <small>
+                  {equipmentEvidence[w.slug]
+                    ? "OFFICIAL PRODUCT ICON"
+                    : "NAME CONFIRMED · CONCEPT ART"}
+                </small>
               </div>
             </Link>
           ))}

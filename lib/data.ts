@@ -1,3 +1,8 @@
+import {
+  equipmentEvidence,
+  equipmentSource,
+  extraEquipment,
+} from "./equipment";
 export const official =
   "https://www.roblox.com/games/140431845542654/Bloody-Ragdoll-Physics";
 export const verifiedDate = "2026-11-11";
@@ -43,6 +48,7 @@ export const weapons = [
     category: "Physics",
     kind: "lightning",
   },
+  ...extraEquipment,
 ];
 export const events = [
   {
@@ -84,8 +90,6 @@ export const events = [
 
 export const weaponTotal = 23;
 export const weaponSource = (slug: string) =>
-  slug === "lightning-staff"
-    ? "https://www.roblox.com/game-pass/2058843165/Arsenal"
-    : official;
+  equipmentEvidence[slug] ? equipmentSource : official;
 export const weaponChecked = (slug: string) =>
-  slug === "lightning-staff" ? "12 November 2026" : "11 November 2026";
+  equipmentEvidence[slug] ? "12 November 2026" : "11 November 2026";

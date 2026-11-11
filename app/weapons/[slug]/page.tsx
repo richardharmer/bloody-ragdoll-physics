@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { weapons, official, weaponSource, weaponChecked } from "@/lib/data";
-import { WeaponArt } from "@/components/Art";
+import { EquipmentArt } from "@/components/EquipmentArt";
+import { equipmentEvidence, equipmentSnapshot } from "@/lib/equipment";
+import { EffectDiagram } from "@/components/EffectDiagram";
 export const dynamicParams = false;
 export function generateStaticParams() {
   return weapons.map((w) => ({ slug: w.slug }));
@@ -27,6 +29,7 @@ export default async function Page({
   const { slug } = await params;
   const w = weapons.find((w) => w.slug === slug);
   if (!w) notFound();
+  const evidence = equipmentEvidence[w.slug];
   return (
     <div className="page">
       <Link href="/weapons/" className="back">
@@ -38,13 +41,14 @@ export default async function Page({
           <h1>{w.name}</h1>
           <p className="confirmed">
             ✓ Name confirmed in{" "}
-            {w.slug === "lightning-staff"
-              ? "the official Arsenal pass description"
+            {evidence
+              ? "the official Roblox product catalog"
               : "the official game description"}
           </p>
           <p>
-            This entry confirms the weapon’s presence. It does not claim a
-            damage value, menu location or special behavior.
+            {evidence
+              ? evidence.effect
+              : "The name is confirmed; a specific effect has not been verified."}
           </p>
           <a
             className="button primary"
@@ -56,10 +60,22 @@ export default async function Page({
           </a>
         </div>
         <div className="detail-art">
-          <WeaponArt kind={w.kind} />
-          <small>ORIGINAL CONCEPT / NOT THE IN-GAME MODEL</small>
+          <EquipmentArt {...w} />
+          <small>
+            {evidence
+              ? "OFFICIAL ROBLOX PRODUCT ICON / NOT A GAMEPLAY CAPTURE"
+              : "ORIGINAL CONCEPT / NOT THE IN-GAME MODEL"}
+          </small>
         </div>
       </div>
+      {evidence && (
+        <div className="notice">
+          Effect summarized from the developer’s product description, not
+          independently measured. Product ID {evidence.productId}.{" "}
+          <a href={equipmentSnapshot}>Read the dated source snapshot ↗</a>
+        </div>
+      )}
+      {evidence?.diagram && <EffectDiagram kind={evidence.diagram} />}
       <div className="detail-columns">
         <section>
           <h2>What we know</h2>
@@ -72,8 +88,8 @@ export default async function Page({
               <dt>Source</dt>
               <dd>
                 <a href={weaponSource(w.slug)}>
-                  {w.slug === "lightning-staff"
-                    ? "Official Arsenal pass"
+                  {evidence
+                    ? "Official Roblox product catalog"
                     : "Official game description"}{" "}
                   ↗
                 </a>
@@ -92,6 +108,8 @@ export default async function Page({
                     location not verified.{" "}
                     <Link href="/passes/">Compare passes →</Link>
                   </>
+                ) : evidence ? (
+                  "Official product record exists. Current in-game purchase route, entitlement duration and menu location are not verified."
                 ) : (
                   "Not verified in this entry"
                 )}
@@ -112,8 +130,9 @@ export default async function Page({
             <li>
               <b>Find the matching item</b>
               <p>
-                Read the actual in-game inventory label. Do not rely on this
-                concept drawing to identify the model.
+                Read the actual in-game inventory label. An icon or concept
+                drawing alone does not establish the current model or menu
+                position.
               </p>
             </li>
             <li>

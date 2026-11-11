@@ -42,8 +42,9 @@ export function Footer() {
       </div>
       <p>
         Unofficial fan-made guide. Not affiliated with Roblox or the game’s
-        creator. Illustrations and simulations are original explanatory
-        concepts, not game assets or measured game behavior.
+        creator. Official product icons are credited on equipment entries. Other
+        illustrations and simulations are original explanations, not measured
+        game behavior.
       </p>
       <small>Official game, pass and badge records · Updated 12 NOV 2026</small>
     </footer>

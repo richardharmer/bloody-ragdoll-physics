@@ -22,3 +22,13 @@ Limitations: no actual Roblox gameplay session was tested. UI button locations, 
 - Browser QA: 390px passes and mobile pages have document width 390px; annotation switch updates detail and timestamp. Badge completion survives reload; First steps + unfinished filter excludes the completed task.
 - Browser extension adds an immersive-translate attribute to HTML, generating a development hydration attribute warning; no application interaction failure observed.
 - Production build, TypeScript and static export audit passed: 19 sitemap routes, one H1 and matching canonical per route, all local page links resolve. Mobile badge page also fits 390px.
+
+## Equipment expansion — 12 November 2026
+
+- Primary evidence: `https://apis.roblox.com/developer-products/v2/universes/10773926254/developerproducts?limit=100`; 31 records, null next cursor. Twenty selected equipment records have correct universe IDs and unique product IDs. Snapshot and all 20 valid PNG icons are shipped locally.
+- Added 15 names; 25 combined weapon/tool entries. Kept advertised 23-weapon count separate. Excluded Starter Pack, color and event products; specifically distinguished Black Hole equipment from BLACKHOLE event.
+- Inspected developer community 91569202, owner profile 9499434211 and official game page: no Discord link visible. Old Toy Tools pass 2059508042 names rope/balloon/freeze but is off sale, so not added to active pass comparison. Other inspected old pass descriptions did not identify individual equipment.
+- GD Trace DdwGd37TWIs at 03:51: SMG, FIRE, RELOAD, 25 / 32 visible. Chirisye_24 qAPOJWuteq4 at 06:27: Katana, Throwing Knives, Bat visible. These video descriptions lack game-ID links; Bat remains excluded from the official roster. B2E FF sampled at 05:09, 09:02 and 11:35 did not show a readable syringe inventory. No claim of full-frame or full-video exhaustive review.
+- No verified individual syringe names/effects added. Broad official outcomes remain separately labeled.
+- Production build and typecheck pass. Static audit: all 34 sitemap pages have one H1, matching canonical, resolving internal links and local image assets.
+- Browser QA against static production output: Tools filter yields six cards; thruster search yields two; empty results and reset restore 25. Lightning stage switch renders body-to-body arcs. Mobile FIRE/RELOAD annotation updates correctly. Armory and detail fit 390px without page overflow; mobile diagram inspected at 390px.

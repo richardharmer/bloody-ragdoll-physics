@@ -2,17 +2,18 @@ import { PageIntro } from "@/components/Shell";
 import Armory from "@/components/Armory";
 export const metadata = {
   alternates: { canonical: "/weapons/" },
-  title: "Weapon database — confirmed names",
+  title: "Weapon & tool database — sourced effects",
   description:
-    "Browse 10 weapon names confirmed by the official game description and Arsenal pass, including Lightning Staff. Numeric stats remain unverified.",
+    "Browse 25 sourced weapons and tools, with 20 official product icons and published effect descriptions. Explore visual explanations without invented stats.",
 };
 export default function Page() {
   return (
     <div className="page">
       <PageIntro tag="DATABASE / THE ARMORY" title="Choose your instrument.">
-        23 weapons are advertised. These 10 names are confirmed by the official
-        game description and Arsenal pass. Artwork is conceptual; damage,
-        unlocks and exact models are not verified.
+        Browse 25 names across weapons and tools. Twenty entries have official
+        product icons and published effect descriptions. The game advertises 23
+        weapons, but does not explain how tools count toward that total; this
+        combined catalog is not a complete 23-weapon checklist.
       </PageIntro>
       <Armory />
     </div>

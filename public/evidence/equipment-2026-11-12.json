@@ -1,0 +1,188 @@
+{
+  "source": "https://apis.roblox.com/developer-products/v2/universes/10773926254/developerproducts?limit=100",
+  "checked": "2026-11-12",
+  "nextPageCursor": null,
+  "recordType": "Selected equipment from the official public developer-product catalog; not a complete inventory or syringe roster",
+  "records": [
+    {
+      "ProductId": 3724638495,
+      "DeveloperProductId": 81318851,
+      "Name": "Rope",
+      "Description": "Tie a limb to anything.",
+      "IconImageAssetId": 99109728705563,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:36:00.31Z"
+    },
+    {
+      "ProductId": 3724638505,
+      "DeveloperProductId": 81318852,
+      "Name": "Slingshot",
+      "Description": "A rock with a lot of feeling behind it.",
+      "IconImageAssetId": 103107201264856,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:37:59.359Z"
+    },
+    {
+      "ProductId": 3724638628,
+      "DeveloperProductId": 81318857,
+      "Name": "Balloon",
+      "Description": "Clip it to a body and watch it float off.",
+      "IconImageAssetId": 92081955955166,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:37:20.435Z"
+    },
+    {
+      "ProductId": 3724638649,
+      "DeveloperProductId": 81318859,
+      "Name": "SMG",
+      "Description": "Holds down fast.",
+      "IconImageAssetId": 120375549838479,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:38:09.507Z"
+    },
+    {
+      "ProductId": 3724638659,
+      "DeveloperProductId": 81318860,
+      "Name": "Nail Gun",
+      "Description": "Pins them to the wall.",
+      "IconImageAssetId": 70369335729250,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:36:34.578Z"
+    },
+    {
+      "ProductId": 3724638668,
+      "DeveloperProductId": 81318862,
+      "Name": "Shotgun",
+      "Description": "One shove with a lot of holes in it.",
+      "IconImageAssetId": 93451911179969,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:38:25.759Z"
+    },
+    {
+      "ProductId": 3724638674,
+      "DeveloperProductId": 81318863,
+      "Name": "Throwing Knives",
+      "Description": "Three in the hand. They stick.",
+      "IconImageAssetId": 88471704210601,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:54:18.984Z"
+    },
+    {
+      "ProductId": 3724638686,
+      "DeveloperProductId": 81318865,
+      "Name": "Grenade",
+      "Description": "Cook it, throw it, enjoy the bounce.",
+      "IconImageAssetId": 94991836872770,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:39:47.424Z"
+    },
+    {
+      "ProductId": 3724638690,
+      "DeveloperProductId": 81318866,
+      "Name": "Freeze",
+      "Description": "Stops a body in mid air.",
+      "IconImageAssetId": 92359655867916,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:37:42.981Z"
+    },
+    {
+      "ProductId": 3724638702,
+      "DeveloperProductId": 81318868,
+      "Name": "Harpoon",
+      "Description": "Goes through, drags them back.",
+      "IconImageAssetId": 77532481989024,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:39:14.644Z"
+    },
+    {
+      "ProductId": 3724638717,
+      "DeveloperProductId": 81318869,
+      "Name": "Rifle",
+      "Description": "Holds steady, hits harder.",
+      "IconImageAssetId": 138923801663288,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:48:06.954Z"
+    },
+    {
+      "ProductId": 3724638728,
+      "DeveloperProductId": 81318870,
+      "Name": "Katana",
+      "Description": "Long reach, deep cuts.",
+      "IconImageAssetId": 123889321447104,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:40:03.78Z"
+    },
+    {
+      "ProductId": 3724638742,
+      "DeveloperProductId": 81318871,
+      "Name": "Sticky Bomb",
+      "Description": "Stick it on a dummy. Wait.",
+      "IconImageAssetId": 73697384167246,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:40:14.049Z"
+    },
+    {
+      "ProductId": 3724638753,
+      "DeveloperProductId": 81318872,
+      "Name": "Sniper",
+      "Description": "Lifts a body off its feet.",
+      "IconImageAssetId": 83086331196237,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T12:38:58.378Z"
+    },
+    {
+      "ProductId": 3724638768,
+      "DeveloperProductId": 81318873,
+      "Name": "Gravity Gun",
+      "Description": "Blast them into a wall. Splat.",
+      "IconImageAssetId": 127662928332973,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T19:32:26.233Z"
+    },
+    {
+      "ProductId": 3724638779,
+      "DeveloperProductId": 81318874,
+      "Name": "Lightning Staff",
+      "Description": "Arcs from body to body.",
+      "IconImageAssetId": 102353295160624,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T19:32:26.978Z"
+    },
+    {
+      "ProductId": 3724638795,
+      "DeveloperProductId": 81318876,
+      "Name": "Black Hole",
+      "Description": "Everything goes in the middle.",
+      "IconImageAssetId": 71468081938240,
+      "UniverseId": 10773926254,
+      "Updated": "2026-10-31T19:32:27.874Z"
+    },
+    {
+      "ProductId": 3725420118,
+      "DeveloperProductId": 81385173,
+      "Name": "Thruster",
+      "Description": "On the floor it takes off. On anything else, that takes off.",
+      "IconImageAssetId": 134406560373599,
+      "UniverseId": 10773926254,
+      "Updated": "2026-11-01T00:18:07.617Z"
+    },
+    {
+      "ProductId": 3725420151,
+      "DeveloperProductId": 81385175,
+      "Name": "Fireworks",
+      "Description": "Stick one on anything. Up it goes, and the sky goes with it.",
+      "IconImageAssetId": 125125286306552,
+      "UniverseId": 10773926254,
+      "Updated": "2026-11-01T00:18:40.47Z"
+    },
+    {
+      "ProductId": 3725420185,
+      "DeveloperProductId": 81385176,
+      "Name": "Power Thruster",
+      "Description": "The Thruster with no sense of proportion. Cars leave the ground.",
+      "IconImageAssetId": 81908465797766,
+      "UniverseId": 10773926254,
+      "Updated": "2026-11-01T00:18:24.025Z"
+    }
+  ]
+}

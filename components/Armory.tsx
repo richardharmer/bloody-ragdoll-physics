@@ -2,8 +2,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Search, ArrowUpRight } from "lucide-react";
-import { weapons, weaponTotal } from "@/lib/data";
-import { WeaponArt } from "./Art";
+import { weapons } from "@/lib/data";
+import { EquipmentArt } from "./EquipmentArt";
+import { equipmentEvidence } from "@/lib/equipment";
 export default function Armory() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
@@ -25,20 +26,22 @@ export default function Armory() {
           />
         </label>
         <div className="chips" aria-label="Weapon categories">
-          {["All", "Ranged", "Melee", "Physics"].map((c) => (
-            <button
-              key={c}
-              aria-pressed={c === category}
-              onClick={() => setCategory(c)}
-            >
-              {c}
-            </button>
-          ))}
+          {["All", "Ranged", "Melee", "Physics", "Explosives", "Tools"].map(
+            (c) => (
+              <button
+                key={c}
+                aria-pressed={c === category}
+                onClick={() => setCategory(c)}
+              >
+                {c}
+              </button>
+            ),
+          )}
         </div>
       </div>
       <p className="result-count" aria-live="polite">
-        {shown.length} of {weapons.length} confirmed names · Editorial
-        categories · {weaponTotal - weapons.length} other names not yet verified
+        {shown.length} of {weapons.length} sourced weapon & tool entries ·
+        Categories are editorial; this is not the advertised 23-weapon roster.
       </p>
       <div className="weapon-grid">
         {shown.map((w) => (
@@ -51,10 +54,19 @@ export default function Armory() {
               <span>{w.category}</span>
               <ArrowUpRight size={18} />
             </div>
-            <WeaponArt kind={w.kind} />
+            <EquipmentArt {...w} />
             <div className="weapon-bottom">
               <h2>{w.name}</h2>
-              <small>NAME CONFIRMED · CONCEPT ART</small>
+              {equipmentEvidence[w.slug] && (
+                <p className="card-effect">
+                  {equipmentEvidence[w.slug].effect}
+                </p>
+              )}
+              <small>
+                {equipmentEvidence[w.slug]
+                  ? "OFFICIAL PRODUCT ICON"
+                  : "NAME CONFIRMED · CONCEPT ART"}
+              </small>
             </div>
           </Link>
         ))}

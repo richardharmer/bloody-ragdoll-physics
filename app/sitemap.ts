@@ -15,8 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...weapons.map((w) => `/weapons/${w.slug}/`),
   ].map((path) => ({
     url: `https://bloody-ragdoll-physics.pages.dev${path}`,
-    lastModified: ["/syringes/", "/sandbox/"].includes(path)
-      ? "2026-11-11"
-      : "2026-11-12",
+    lastModified: ["/sandbox/"].includes(path) ? "2026-11-11" : "2026-11-12",
   }));
 }

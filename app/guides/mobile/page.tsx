@@ -1,3 +1,4 @@
+import { FireControlNotes } from "@/components/FireControlNotes";
 import { PageIntro } from "@/components/Shell";
 import { GuideLinks } from "@/components/GuideLinks";
 import { MobileFieldNotes } from "@/components/MobileFieldNotes";
@@ -15,8 +16,8 @@ export default function Page() {
         tag="MOBILE / VIDEO OBSERVATIONS"
         title="Read the screen. Find the controls."
       >
-        Explore four visible interface areas from landscape mobile footage.
-        Select a numbered annotation to see what the recording actually
+        Explore the Landmine and SMG interface layouts from landscape mobile
+        footage. Select a numbered annotation to see what the recording actually
         establishes.
       </PageIntro>
       <div className="notice">
@@ -26,6 +27,7 @@ export default function Page() {
         verified control guide for every device.
       </div>
       <MobileFieldNotes />
+      <FireControlNotes />
       <div className="research-card">
         <h2>What remains unconfirmed</h2>
         <p>

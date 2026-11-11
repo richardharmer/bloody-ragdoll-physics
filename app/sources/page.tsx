@@ -1,3 +1,4 @@
+import { equipmentSource, equipmentSnapshot } from "@/lib/equipment";
 import { PageIntro } from "@/components/Shell";
 import { passes, passUrl, mobileSource } from "@/lib/research";
 import { official } from "@/lib/data";
@@ -21,8 +22,8 @@ export default function Page() {
           Bloody Ragdoll Physics — official Roblox game page ↗
         </a>
         <br />
-        Description checked on 11 November 2026. The game can change after this
-        date.
+        Description rechecked on 12 November 2026. The game can change after
+        this date.
       </p>
       <h2>Confirmed by that description</h2>
       <ul>
@@ -64,6 +65,30 @@ export default function Page() {
         badge list. Each task links its own badge record. Locations and detailed
         award triggers remain unverified.
       </p>
+      <h2>Official equipment catalog · 12 November 2026</h2>
+      <p>
+        <a href={equipmentSource}>Roblox public developer-product catalog ↗</a>{" "}
+        identifies universe 10773926254 on each record. It returned 31 products
+        with no next page. We extracted 20 equipment records, adding 15 names to
+        the existing ten-name registry: 25 combined weapon and tool entries.{" "}
+        <a href={equipmentSnapshot}>Read the dated evidence snapshot ↗</a>.
+      </p>
+      <p>
+        Product descriptions support the effect summaries, not measured damage,
+        exact controls or entitlement duration. Blood colors, event products and
+        Starter Pack are excluded from the equipment roster. In particular,
+        BLACKHOLE (event) is separate from Black Hole (equipment). The
+        advertised 23-weapon total cannot be reconciled simply by counting every
+        product.
+      </p>
+      <h2>Discord and syringe coverage</h2>
+      <p>
+        No Discord invite was visible on the official game page, creator
+        community or owner profile inspected. We did not access a verified
+        official Discord channel. No individually named syringes were present in
+        the product catalog. The game and Injections pass still describe broad
+        outcomes only; 0 of 14 individual syringe names are verified.
+      </p>
       <h2>Gameplay video · limited evidence</h2>
       <p>
         <a href={mobileSource}>B2E FF — creator-labeled gameplay ↗</a> supports
@@ -72,6 +97,18 @@ export default function Page() {
         and 00:30. The video description does not identify the exact Roblox
         place ID. We do not use it to confirm the official weapon roster or
         unobserved button effects.
+      </p>
+      <p>
+        <a href="https://www.youtube.com/watch?v=DdwGd37TWIs&t=231s">
+          GD Trace at 03:51 ↗
+        </a>{" "}
+        visibly shows SMG selected, FIRE, RELOAD and a 25 / 32 readout.{" "}
+        <a href="https://www.youtube.com/watch?v=qAPOJWuteq4&t=387s">
+          Chirisye_24 at 06:27 ↗
+        </a>{" "}
+        visibly shows Katana, Throwing Knives and Bat in the toolbar. Both lack
+        an exact game link in their descriptions. Bat is not promoted to the
+        official roster. These sampled frames did not verify syringe use.
       </p>
       <h2>Not yet verified</h2>
       <p>
@@ -82,12 +119,13 @@ export default function Page() {
       </p>
       <h2>How to read the illustrations</h2>
       <p>
-        All artwork is original, stylized concept art. It does not reproduce
-        official weapon models. The mobile schematic reconstructs only the
-        observed video layout. Event visuals are artistic interpretations of the
-        names. The physics demo uses an independent mathematical animation and
-        does not model Roblox physics or game-specific mechanics. Weapon
-        categories are editorial navigation labels.
+        Twenty equipment images are official Roblox product icons, credited on
+        their cards and linked to records in the dated source snapshot. They are
+        not gameplay screenshots. Other weapon drawings and all explanatory
+        diagrams are original. The three-stage effect diagrams visualize
+        published descriptions, not measured behavior or exact inputs. Mobile
+        schematics reconstruct observed video layouts. The independent physics
+        demo does not model Roblox physics. Categories are editorial.
       </p>
       <h2>Verification standard for future additions</h2>
       <p>
