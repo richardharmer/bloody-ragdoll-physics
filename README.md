@@ -54,3 +54,7 @@ Dark industrial laboratory. Background `#0b1014`, panels `#111a20`, orange `#ff7
 The Roblox public developer-product endpoint for universe 10773926254 returned 31 records with no next cursor. Twenty equipment records overlap five existing entries, producing 25 combined weapons/tools. This is not a claim that all 23 advertised weapons have been reconciled. See `/evidence/equipment-2026-11-12.json` for the source URL, IDs and descriptions. Twenty local PNGs are official product icons; five other entries retain labeled concept illustrations. Six equipment pages have source-description schematics.
 
 No official Discord invite was visible in the game, creator community or owner profile inspected. No named syringe records were found in this catalog, and sampled gameplay frames did not establish syringe name/effect pairs. The syringe page explicitly reports 0 individually verified names out of 14 advertised. Do not turn Blood color products, the Freeze tool, or other games' labels into syringe entries.
+
+## IndexNow
+
+The UTF-8 verification file is published at `/94310c8b05f7447bb99140ef110496dc.txt`. Run `npm run indexnow` to verify the live key and preview unique production sitemap URLs; run `npm run indexnow -- --submit` to submit them to Bing. The script rejects mismatched hosts and key files, and reports 200 versus 202 accurately. Submit after publishing content changes; receipt is not a guarantee of indexing.
