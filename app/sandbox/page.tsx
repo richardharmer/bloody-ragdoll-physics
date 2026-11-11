@@ -1,4 +1,32 @@
-import {PageIntro} from '@/components/Shell';
-import {PhysicsLab,EventLab} from '@/components/Experiments';
-export const metadata={title:'Interactive physics lab & world events',description:'Experiment with an illustrative physics model and explore five officially named world events. These visual concepts are not measured gameplay simulations.'};
-export default function Page(){return <div className="page"><PageIntro tag="INTERACTIVE / EXPERIMENT CHAMBER" title="Make a little chaos.">A hands-on way to explore motion and plan experiments. This is a standalone teaching tool, not a game emulator or a predictor of in-game outcomes.</PageIntro><PhysicsLab/><section className="section"><div className="section-heading"><div><p className="eyebrow">FIVE OFFICIALLY NAMED EVENTS</p><h2>Change the whole scene.</h2></div></div><EventLab/></section></div>}
+import { PageIntro } from "@/components/Shell";
+import { PhysicsLab, EventLab } from "@/components/Experiments";
+export const metadata = {
+  alternates: { canonical: "/sandbox/" },
+  title: "Interactive physics lab & world events",
+  description:
+    "Experiment with an illustrative physics model and explore five officially named world events. These visual concepts are not measured gameplay simulations.",
+};
+export default function Page() {
+  return (
+    <div className="page">
+      <PageIntro
+        tag="INTERACTIVE / EXPERIMENT CHAMBER"
+        title="Make a little chaos."
+      >
+        A hands-on way to explore motion and plan experiments. This is a
+        standalone teaching tool, not a game emulator or a predictor of in-game
+        outcomes.
+      </PageIntro>
+      <PhysicsLab />
+      <section className="section">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">FIVE OFFICIALLY NAMED EVENTS</p>
+            <h2>Change the whole scene.</h2>
+          </div>
+        </div>
+        <EventLab />
+      </section>
+    </div>
+  );
+}

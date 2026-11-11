@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://bloody-ragdoll-physics.pages.dev/sitemap.xml

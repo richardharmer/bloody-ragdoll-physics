@@ -40,7 +40,7 @@ All SVG art is original conceptual artwork. The physics demo is a ballistic visu
 - `/sandbox/`: adjustable illustrative physics demo and five event concepts
 - `/sources/`: evidence, limitations and privacy
 
-Search demand and keyword volumes are not measured. These task mappings come from the project brief and source availability, not fabricated SEO data. Canonical URLs and sitemap should be configured after the actual production URL is assigned; do not index a guessed hostname.
+Search demand and keyword volumes are not measured. These task mappings come from the project brief and source availability, not fabricated SEO data. Canonical URLs and sitemap use the assigned Cloudflare hostname: https://bloody-ragdoll-physics.pages.dev. Update metadataBase and the sitemap origin together when a custom domain is configured.
 
 ## Visual system
 
