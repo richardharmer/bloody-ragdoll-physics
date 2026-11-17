@@ -1,43 +1,18 @@
 "use client";
 import { useEffect, useState } from "react";
-import {
-  Trophy,
-  Target,
-  DoorOpen,
-  Bomb,
-  RotateCcw,
-  Pin,
-  Wind,
-  Snowflake,
-  ArrowUp,
-  ArrowDown,
-  MoveDown,
-  Disc,
-  Anchor,
-} from "lucide-react";
+import Link from "next/link";
+import { Trophy, ExternalLink } from "lucide-react";
 import { badges, badgeUrl } from "@/lib/research";
-const icons = [
-  DoorOpen,
-  Target,
-  Bomb,
-  Bomb,
-  Anchor,
-  ArrowUp,
-  Disc,
-  Pin,
-  ArrowDown,
-  RotateCcw,
-  Pin,
-  Wind,
-  Snowflake,
-];
+
 const key = "brp-badge-checklist-v1";
+
 export function BadgeChecklist() {
   const [done, setDone] = useState<string[]>([]);
   const [group, setGroup] = useState("All");
   const [pending, setPending] = useState(false);
   const [ready, setReady] = useState(false);
   const [message, setMessage] = useState("");
+
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(key) || "[]");
@@ -55,108 +30,139 @@ export function BadgeChecklist() {
     }
     setReady(true);
   }, []);
+
   function save(next: string[]) {
     setDone(next);
     try {
       localStorage.setItem(key, JSON.stringify(next));
-      setMessage("Progress saved on this browser.");
+      setMessage(
+        `Saved (${next.length} of ${badges.length} badges marked complete in this browser).`,
+      );
     } catch {
       setMessage(
         "Browser storage is unavailable; progress lasts for this visit only.",
       );
     }
   }
+
   const shown = badges.filter(
     (b) =>
       (group === "All" || b.group === group) &&
       (!pending || !done.includes(b.id)),
   );
+
   return (
     <>
-      <div className="checklist-summary">
-        <Trophy size={40} />
-        <div>
-          <strong>
-            {done.length} / {badges.length}
-          </strong>
-          <p>tasks marked complete</p>
+      <div className="checklist-bar">
+        <div className="checklist-summary">
+          <Trophy size={28} aria-hidden="true" />
+          <div>
+            <strong>
+              {done.length} / {badges.length}
+            </strong>
+            <span>badges completed</span>
+          </div>
+          <progress
+            aria-label="Badge completion progress"
+            value={done.length}
+            max={badges.length}
+          />
         </div>
-        <progress
-          aria-label="Badge task progress"
-          value={done.length}
-          max={badges.length}
-        />
-      </div>
-      <p className="evidence-note">
-        This is your personal checklist, not a connection to your Roblox
-        account. Mark tasks after checking your in-game badge awards. Icons are
-        original guide symbols.
-      </p>
-      <div className="research-controls">
-        <label>
-          Task group{" "}
-          <select value={group} onChange={(e) => setGroup(e.target.value)}>
+
+        <div className="research-controls">
+          <div className="chips" role="group" aria-label="Badge category">
             {["All", "First steps", "Lab equipment", "Manipulation"].map(
               (g) => (
-                <option key={g}>{g}</option>
+                <button
+                  type="button"
+                  key={g}
+                  aria-pressed={group === g}
+                  onClick={() => setGroup(g)}
+                >
+                  {g}
+                </button>
               ),
             )}
-          </select>
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={pending}
-            onChange={(e) => setPending(e.target.checked)}
-          />{" "}
-          Show unfinished only
-        </label>
+          </div>
+          <label className="inline-toggle">
+            <input
+              type="checkbox"
+              checked={pending}
+              onChange={(e) => setPending(e.target.checked)}
+            />
+            <span>Unfinished only</span>
+          </label>
+        </div>
       </div>
+
       <p role="status" className="save-status">
         {message ||
-          `${shown.length} tasks shown. Progress stays on this browser.`}
+          `Showing ${shown.length} of ${badges.length} official badges. Checklist saves locally in your browser.`}
       </p>
-      <div className="research-grid">
+
+      <div className="badge-list-grid">
         {shown.map((b) => {
-          const index = badges.indexOf(b);
-          const Icon = icons[index] || MoveDown;
+          const completed = done.includes(b.id);
           return (
             <article
-              className={`research-card badge-card ${done.includes(b.id) ? "is-complete" : ""}`}
+              className={`badge-item ${completed ? "is-complete" : ""}`}
               key={b.id}
             >
-              <div className="badge-symbol">
-                <Icon size={42} strokeWidth={1.4} />
-                <span>{String(index + 1).padStart(2, "0")}</span>
+              <div className="badge-item-top">
+                <label className="badge-check-label">
+                  <input
+                    type="checkbox"
+                    disabled={!ready}
+                    checked={completed}
+                    onChange={() =>
+                      save(
+                        completed
+                          ? done.filter((id) => id !== b.id)
+                          : [...done, b.id],
+                      )
+                    }
+                  />
+                  <h2>{b.name}</h2>
+                </label>
+                <span className="cat-pill">{b.group}</span>
               </div>
-              <span className="eyebrow">{b.group}</span>
-              <h2>{b.name}</h2>
-              <p>{b.task}</p>
-              <label className="task-check">
-                <input
-                  type="checkbox"
-                  disabled={!ready}
-                  checked={done.includes(b.id)}
-                  onChange={() =>
-                    save(
-                      done.includes(b.id)
-                        ? done.filter((id) => id !== b.id)
-                        : [...done, b.id],
-                    )
-                  }
-                />
-                Mark {b.name} complete
-              </label>
-              <a href={badgeUrl(b)} target="_blank" rel="noreferrer">
-                Official badge ↗
-              </a>
+
+              <p className="badge-objective">
+                <strong>Objective:</strong> {b.task}
+              </p>
+              <p className="badge-tip">
+                <strong>How to do it:</strong> {b.tip}
+              </p>
+
+              <div className="badge-links">
+                {b.toolSlug && (
+                  <Link href={`/weapons/${b.toolSlug}/`} className="pill-link">
+                    Item: {b.toolLabel} →
+                  </Link>
+                )}
+                {b.guideHref && (
+                  <Link href={b.guideHref} className="pill-link">
+                    {b.guideLabel} →
+                  </Link>
+                )}
+                <a
+                  href={badgeUrl(b)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="ext-subtle"
+                >
+                  Roblox record <ExternalLink size={12} aria-hidden="true" />
+                </a>
+              </div>
             </article>
           );
         })}
       </div>
+
       {shown.length === 0 && (
-        <div className="notice">
-          No unfinished tasks in this selection. Change the filters to see more.
+        <div className="empty">
+          <h2>All matching badges marked complete</h2>
+          <p>Uncheck “Unfinished only” or switch groups to review completed badges.</p>
         </div>
       )}
     </>
